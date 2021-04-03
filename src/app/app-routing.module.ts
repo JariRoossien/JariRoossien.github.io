@@ -6,6 +6,7 @@ import {HomeComponent} from './components/home/home/home.component';
 const routes: Routes = [
   {path: 'leaderboard', component: LeaderboardComponent},
   {path: '', component: HomeComponent},
+  {path: '**', component: HomeComponent}
 ];
 
 @NgModule({
