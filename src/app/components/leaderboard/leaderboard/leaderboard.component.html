@@ -4,6 +4,9 @@
       <table class="table table-striped">
         <thead>
         <tr>
+          <th class="font-weight-bold">
+            #
+          </th>
           <th>
           </th>
           <th class="">
@@ -15,7 +18,8 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let user of players">
+        <tr *ngFor="let user of players; let i = index">
+          <td>{{i}}</td>
           <td><img style="max-width: 40px" src="https://crafatar.com/avatars/{{user.player_uuid}}"></td>
           <td class="">{{user.displayname}}</td>
           <td class="text-center">{{user.stats.TNTGames.wins_tntrun}}</td>
