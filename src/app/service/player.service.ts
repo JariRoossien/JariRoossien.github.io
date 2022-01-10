@@ -8,12 +8,14 @@ import {Observable} from 'rxjs';
 })
 export class PlayerService {
 
-  private API_URL = 'http://135.125.133.233:8080/player';
+  // private API_URL = 'http://localhost:8080/player';
+  private API_URL = 'http://smp.trs-guild.com:8080/player';
 
   constructor(private httpClient: HttpClient) {
   }
 
   getPlayerStats(gamemode: string): Observable<any> {
+    console.log("Requesting data... for " + gamemode);
     return this.httpClient.get(`${this.API_URL}/${gamemode}`);
   }
 }
