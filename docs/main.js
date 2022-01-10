@@ -18,9 +18,11 @@ __webpack_require__.r(__webpack_exports__);
 class PlayerService {
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.API_URL = 'http://135.125.133.233:8080/player';
+        // private API_URL = 'http://localhost:8080/player';
+        this.API_URL = 'http://smp.trs-guild.com:8080/player';
     }
     getPlayerStats(gamemode) {
+        console.log("Requesting data... for " + gamemode);
         return this.httpClient.get(`${this.API_URL}/${gamemode}`);
     }
 }
@@ -137,7 +139,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class AppComponent {
     constructor() {
-        this.title = 'TRSFrontend';
+        this.title = 'The Running Society';
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
@@ -271,7 +273,7 @@ function LeaderboardComponent_div_2_tr_12_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](i_r3 + 1);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate1"]("src", "https://crafatar.com/avatars/", user_r2.player_uuid, "", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate1"]("src", "https://crafatar.com/avatars/", user_r2.player_uuid, "?overlay", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](user_r2.displayname);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
@@ -314,6 +316,11 @@ class LeaderboardComponent {
             console.log(data);
             this.players = data;
             console.log(this.players);
+            let total = 0;
+            for (let i = 0; i < this.players.length; i++) {
+                total += this.players[i].stats.tntgames.wins_tntrun;
+            }
+            console.log(total);
         });
     }
 }
