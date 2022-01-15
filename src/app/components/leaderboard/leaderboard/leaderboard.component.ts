@@ -26,5 +26,4 @@ export class LeaderboardComponent implements OnInit {
       console.log(total);
     });
   }
-
 }

@@ -9,6 +9,7 @@ import { LeaderboardComponent } from './components/leaderboard/leaderboard/leade
 import { HomeComponent } from './components/home/home/home.component';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {HttpClientModule} from '@angular/common/http';
+import { ParkourComponent } from './components/leaderboard/parkour/parkour.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,14 @@ import {HttpClientModule} from '@angular/common/http';
     NavbarComponent,
     HeaderComponent,
     LeaderboardComponent,
-    HomeComponent
+    HomeComponent,
+    ParkourComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MDBBootstrapModule.forRoot()
+    MDBBootstrapModule.forRoot(),
   ],
   providers: [
   ],

@@ -1,0 +1,39 @@
+<div class="flex-column">
+  <div class="">
+      <select matNativeControl (change)="onSelectChange($event)">
+        <option *ngFor="let option of parkourTypes" [value]="option.endpoint"
+                [selected]="selectedParkour === option.endpoint">{{ option.viewValue }}</option>
+      </select>
+  </div>
+  <div class="container d-flex justify-content-center">
+    <div class="col-10">
+      <div *ngIf="players !== undefined">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th class="font-weight-bold">
+              #
+            </th>
+            <th>
+            </th>
+            <th class="">
+              Username
+            </th>
+            <th class="text-center">
+              TNTRun wins
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let user of players; let i = index">
+            <td>{{i + 1}}</td>
+            <td><img style="max-width: 40px" src="https://crafatar.com/avatars/{{user.uuid}}?overlay"></td>
+            <td class="">{{user.displayName}}</td>
+            <td class="text-center">{{user.response | date:'mm:ss.SSS'}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

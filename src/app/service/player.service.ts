@@ -18,4 +18,8 @@ export class PlayerService {
     console.log("Requesting data... for " + gamemode);
     return this.httpClient.get(`${this.API_URL}/${gamemode}`);
   }
+
+  getParkourData(endpoint: string): Observable<any> {
+    return this.httpClient.get(`${this.API_URL}/parkour/${endpoint}`);
+  }
 }
