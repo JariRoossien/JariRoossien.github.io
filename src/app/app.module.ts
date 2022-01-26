@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home/home.component';
 import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {HttpClientModule} from '@angular/common/http';
 import { ParkourComponent } from './components/leaderboard/parkour/parkour.component';
+import {A11yModule} from '@angular/cdk/a11y';
 
 @NgModule({
   declarations: [
@@ -20,12 +21,13 @@ import { ParkourComponent } from './components/leaderboard/parkour/parkour.compo
     HomeComponent,
     ParkourComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    MDBBootstrapModule.forRoot(),
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        MDBBootstrapModule.forRoot(),
+        A11yModule,
+    ],
   providers: [
   ],
   bootstrap: [AppComponent]

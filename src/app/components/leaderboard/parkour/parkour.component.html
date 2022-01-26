@@ -1,12 +1,13 @@
 <div class="flex-column">
-  <div class="">
-      <select matNativeControl (change)="onSelectChange($event)">
-        <option *ngFor="let option of parkourTypes" [value]="option.endpoint"
+    <div class="d-flex justify-content-center align-content-center form-group">
+      <label for="parkour-select">Parkour Option: </label>
+      <select id="parkour-select" class="custom-select m-3 col-sm-3" (change)="onSelectChange($event)">
+        <option class="custom-select" *ngFor="let option of parkourTypes" [value]="option.endpoint"
                 [selected]="selectedParkour === option.endpoint">{{ option.viewValue }}</option>
       </select>
-  </div>
+    </div>
   <div class="container d-flex justify-content-center">
-    <div class="col-10">
+    <div class="table-container">
       <div *ngIf="players !== undefined">
         <table class="table table-striped">
           <thead>
