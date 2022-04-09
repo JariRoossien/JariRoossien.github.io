@@ -257,7 +257,7 @@ class ParkourComponent {
             { viewValue: "Duels", endpoint: "Duels" },
             { viewValue: "Skywars", endpoint: "SkywarsAug2017" },
             { viewValue: "Build Battle", endpoint: "BuildBattle" },
-            { viewValue: "Main Lobby", endpoint: "mainLobby2017" },
+            { viewValue: "Main Lobby 2017", endpoint: "mainLobby2017" },
             { viewValue: "Prototype Lobby", endpoint: "Prototype" },
             { viewValue: "Bedwars", endpoint: "Bedwars" },
             { viewValue: "Blitz Survival Games", endpoint: "BlitzLobby" },
@@ -269,7 +269,8 @@ class ParkourComponent {
             { viewValue: "Arcade Games", endpoint: "ArcadeGames" },
             { viewValue: "Legacy", endpoint: "Legacy" },
             { viewValue: "Housing", endpoint: "Housing" },
-            { viewValue: "Super Smash", endpoint: "SuperSmash" }
+            { viewValue: "Super Smash", endpoint: "SuperSmash" },
+            { viewValue: "Main Lobby 2022", endpoint: "mainLobby2022" }
         ];
         this.selectedParkour = this.parkourTypes[0].endpoint;
         this.service = playerService;
