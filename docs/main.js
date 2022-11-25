@@ -123,6 +123,109 @@ const environment = {
 
 /***/ }),
 
+/***/ "OXxe":
+/*!******************************************************************************!*\
+  !*** ./src/app/components/worldcup/wcleaderboard/wcleaderboard.component.ts ***!
+  \******************************************************************************/
+/*! exports provided: WCLeaderboardComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WCLeaderboardComponent", function() { return WCLeaderboardComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _service_worldcup_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../service/worldcup.service */ "qnIw");
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ "ofXK");
+
+
+
+
+function WCLeaderboardComponent_div_2_tr_12_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "td");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](4, "img", 8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "td", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "td", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const user_r2 = ctx.$implicit;
+    const i_r3 = ctx.index;
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](i_r3 + 1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate1"]("src", "https://crafatar.com/avatars/", user_r2.player_uuid, "?overlay", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](user_r2.discordName);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate"](user_r2.score);
+} }
+function WCLeaderboardComponent_div_2_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "table", 3);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "thead");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](3, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](4, "th", 4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](5, " # ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](6, "th");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](7, "th", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, " Username ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "th", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, " TNTRun wins ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "tbody");
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](12, WCLeaderboardComponent_div_2_tr_12_Template, 9, 4, "tr", 7);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+} if (rf & 2) {
+    const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵnextContext"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](12);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngForOf", ctx_r0.players);
+} }
+class WCLeaderboardComponent {
+    constructor(wcService) {
+        this.wcService = wcService;
+        this.players = [];
+    }
+    ngOnInit() {
+        this.wcService.getLeaderboardPlayers().subscribe(result => this.players = result);
+    }
+}
+WCLeaderboardComponent.ɵfac = function WCLeaderboardComponent_Factory(t) { return new (t || WCLeaderboardComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_service_worldcup_service__WEBPACK_IMPORTED_MODULE_1__["WorldcupService"])); };
+WCLeaderboardComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: WCLeaderboardComponent, selectors: [["app-wcleaderboard"]], decls: 3, vars: 1, consts: [[1, "container", "d-flex", "justify-content-center"], [1, "table-container"], [4, "ngIf"], [1, "table", "table-striped"], [1, "font-weight-bold"], [1, ""], [1, "text-center"], [4, "ngFor", "ngForOf"], [2, "max-width", "40px", 3, "src"]], template: function WCLeaderboardComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 1);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](2, WCLeaderboardComponent_div_2_Template, 13, 1, "div", 2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx.players !== undefined);
+    } }, directives: [_angular_common__WEBPACK_IMPORTED_MODULE_2__["NgIf"], _angular_common__WEBPACK_IMPORTED_MODULE_2__["NgForOf"]], styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvd29ybGRjdXAvd2NsZWFkZXJib2FyZC93Y2xlYWRlcmJvYXJkLmNvbXBvbmVudC5zY3NzIn0= */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](WCLeaderboardComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-wcleaderboard',
+                templateUrl: './wcleaderboard.component.html',
+                styleUrls: ['./wcleaderboard.component.scss']
+            }]
+    }], function () { return [{ type: _service_worldcup_service__WEBPACK_IMPORTED_MODULE_1__["WorldcupService"] }]; }, null); })();
+
+
+/***/ }),
+
 /***/ "Sy1n":
 /*!**********************************!*\
   !*** ./src/app/app.component.ts ***!
@@ -142,7 +245,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class AppComponent {
     constructor() {
-        this.title = 'The Running Society';
+        this.title = 'The TNTRun Soldiers';
     }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
@@ -347,6 +450,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
 /* harmony import */ var _components_leaderboard_parkour_parkour_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/leaderboard/parkour/parkour.component */ "UzBc");
 /* harmony import */ var _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/cdk/a11y */ "u47x");
+/* harmony import */ var _components_worldcup_wcleaderboard_wcleaderboard_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/worldcup/wcleaderboard/wcleaderboard.component */ "OXxe");
+
 
 
 
@@ -376,7 +481,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _components_header_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"],
         _components_leaderboard_leaderboard_leaderboard_component__WEBPACK_IMPORTED_MODULE_6__["LeaderboardComponent"],
         _components_home_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
-        _components_leaderboard_parkour_parkour_component__WEBPACK_IMPORTED_MODULE_10__["ParkourComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _components_leaderboard_parkour_parkour_component__WEBPACK_IMPORTED_MODULE_10__["ParkourComponent"],
+        _components_worldcup_wcleaderboard_wcleaderboard_component__WEBPACK_IMPORTED_MODULE_12__["WCLeaderboardComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_9__["HttpClientModule"], angular_bootstrap_md__WEBPACK_IMPORTED_MODULE_8__["MDBRootModule"], _angular_cdk_a11y__WEBPACK_IMPORTED_MODULE_11__["A11yModule"]] }); })();
 /*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
@@ -388,7 +494,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _components_header_header_header_component__WEBPACK_IMPORTED_MODULE_5__["HeaderComponent"],
                     _components_leaderboard_leaderboard_leaderboard_component__WEBPACK_IMPORTED_MODULE_6__["LeaderboardComponent"],
                     _components_home_home_home_component__WEBPACK_IMPORTED_MODULE_7__["HomeComponent"],
-                    _components_leaderboard_parkour_parkour_component__WEBPACK_IMPORTED_MODULE_10__["ParkourComponent"]
+                    _components_leaderboard_parkour_parkour_component__WEBPACK_IMPORTED_MODULE_10__["ParkourComponent"],
+                    _components_worldcup_wcleaderboard_wcleaderboard_component__WEBPACK_IMPORTED_MODULE_12__["WCLeaderboardComponent"]
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -581,7 +688,7 @@ class NavbarComponent {
     }
 }
 NavbarComponent.ɵfac = function NavbarComponent_Factory(t) { return new (t || NavbarComponent)(); };
-NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 14, vars: 0, consts: [[1, "navbar", "navbar-expand-lg", "navbar-dark", "bg-danger"], ["href", "#", 1, "navbar-brand"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNavDropdown", "aria-controls", "navbarNavDropdown", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarNavDropdown", 1, "collapse", "navbar-collapse"], [1, "navbar-nav"], [1, "nav-item", "active"], ["routerLink", "/leaderboard", 1, "nav-link"], [1, "nav-item"], ["routerLink", "/parkour", 1, "nav-link"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
+NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: NavbarComponent, selectors: [["app-navbar"]], decls: 17, vars: 0, consts: [[1, "navbar", "navbar-expand-lg", "navbar-dark", "bg-danger"], ["href", "#", 1, "navbar-brand"], ["type", "button", "data-toggle", "collapse", "data-target", "#navbarNavDropdown", "aria-controls", "navbarNavDropdown", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "navbar-toggler"], [1, "navbar-toggler-icon"], ["id", "navbarNavDropdown", 1, "collapse", "navbar-collapse"], [1, "navbar-nav"], [1, "nav-item", "active"], ["routerLink", "/leaderboard", 1, "nav-link"], [1, "nav-item"], ["routerLink", "/parkour", 1, "nav-link"], ["routerLink", "/worldcup/leaderboard", 1, "nav-link"]], template: function NavbarComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "nav", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "a", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h1");
@@ -603,6 +710,11 @@ NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](13, "Parkour Leaderboards");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "li", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "a", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Parkour Leaderboards");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
@@ -615,6 +727,43 @@ NavbarComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCo
                 styleUrls: ['./navbar.component.scss']
             }]
     }], function () { return []; }, null); })();
+
+
+/***/ }),
+
+/***/ "qnIw":
+/*!*********************************************!*\
+  !*** ./src/app/service/worldcup.service.ts ***!
+  \*********************************************/
+/*! exports provided: WorldcupService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorldcupService", function() { return WorldcupService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "fXoL");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
+
+
+
+class WorldcupService {
+    constructor(httpClient) {
+        this.httpClient = httpClient;
+        // private API_URL = 'http://144.91.117.131:8081';
+        this.API_URL = 'http://localhost:8081';
+    }
+    getLeaderboardPlayers() {
+        return this.httpClient.get(this.API_URL + "/leaderboard");
+    }
+}
+WorldcupService.ɵfac = function WorldcupService_Factory(t) { return new (t || WorldcupService)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"])); };
+WorldcupService.ɵprov = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineInjectable"]({ token: WorldcupService, factory: WorldcupService.ɵfac, providedIn: 'root' });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](WorldcupService, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"],
+        args: [{
+                providedIn: 'root'
+            }]
+    }], function () { return [{ type: _angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"] }]; }, null); })();
 
 
 /***/ }),
@@ -634,6 +783,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_leaderboard_leaderboard_leaderboard_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/leaderboard/leaderboard/leaderboard.component */ "hJz+");
 /* harmony import */ var _components_home_home_home_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/home/home/home.component */ "5hgM");
 /* harmony import */ var _components_leaderboard_parkour_parkour_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/leaderboard/parkour/parkour.component */ "UzBc");
+/* harmony import */ var _components_worldcup_wcleaderboard_wcleaderboard_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/worldcup/wcleaderboard/wcleaderboard.component */ "OXxe");
+
 
 
 
@@ -644,6 +795,7 @@ __webpack_require__.r(__webpack_exports__);
 const routes = [
     { path: 'leaderboard', component: _components_leaderboard_leaderboard_leaderboard_component__WEBPACK_IMPORTED_MODULE_2__["LeaderboardComponent"] },
     { path: 'parkour', component: _components_leaderboard_parkour_parkour_component__WEBPACK_IMPORTED_MODULE_4__["ParkourComponent"] },
+    { path: 'worldcup/leaderboard', component: _components_worldcup_wcleaderboard_wcleaderboard_component__WEBPACK_IMPORTED_MODULE_5__["WCLeaderboardComponent"] },
     { path: '', component: _components_home_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] },
     { path: '**', component: _components_home_home_home_component__WEBPACK_IMPORTED_MODULE_3__["HomeComponent"] }
 ];

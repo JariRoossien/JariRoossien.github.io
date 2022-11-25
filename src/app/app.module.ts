@@ -11,6 +11,7 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {HttpClientModule} from '@angular/common/http';
 import { ParkourComponent } from './components/leaderboard/parkour/parkour.component';
 import {A11yModule} from '@angular/cdk/a11y';
+import { WCLeaderboardComponent } from './components/worldcup/wcleaderboard/wcleaderboard.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {A11yModule} from '@angular/cdk/a11y';
     HeaderComponent,
     LeaderboardComponent,
     HomeComponent,
-    ParkourComponent
+    ParkourComponent,
+    WCLeaderboardComponent
   ],
     imports: [
         BrowserModule,

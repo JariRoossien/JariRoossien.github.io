@@ -1,0 +1,31 @@
+<div class="container d-flex justify-content-center">
+  <div class="table-container">
+    <div *ngIf="players !== undefined">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th class="font-weight-bold">
+            #
+          </th>
+          <th>
+          </th>
+          <th class="">
+            Username
+          </th>
+          <th class="text-center">
+            TNTRun wins
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of players; let i = index">
+          <td>{{i + 1}}</td>
+          <td><img style="max-width: 40px" src="https://crafatar.com/avatars/{{user.player_uuid}}?overlay"></td>
+          <td class="">{{user.discordName}}</td>
+          <td class="text-center">{{user.score}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
