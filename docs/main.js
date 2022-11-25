@@ -747,10 +747,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class WorldcupService {
+    // private API_URL = 'http://localhost:8081';
     constructor(httpClient) {
         this.httpClient = httpClient;
-        // private API_URL = 'http://144.91.117.131:8081';
-        this.API_URL = 'http://localhost:8081';
+        this.API_URL = 'http://144.91.117.131:8081';
     }
     getLeaderboardPlayers() {
         return this.httpClient.get(this.API_URL + "/leaderboard");
