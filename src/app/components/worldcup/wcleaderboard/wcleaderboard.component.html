@@ -1,31 +1,86 @@
-<div class="container d-flex justify-content-center">
-  <div class="table-container">
-    <div *ngIf="players !== undefined">
-      <table class="table table-striped">
-        <thead>
-        <tr>
-          <th class="font-weight-bold">
-            #
-          </th>
-          <th>
-          </th>
-          <th class="">
-            Username
-          </th>
-          <th class="text-center">
-            TNTRun wins
-          </th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let user of players; let i = index">
-          <td>{{i + 1}}</td>
-          <td><img style="max-width: 40px" src="https://crafatar.com/avatars/{{user.player_uuid}}?overlay"></td>
-          <td class="">{{user.discordName}}</td>
-          <td class="text-center">{{user.score}}</td>
-        </tr>
-        </tbody>
-      </table>
+<div class="container">
+  <div class="row">
+
+    <div class="col-md-6">
+      <div class="table-container">
+        <div *ngIf="players !== undefined">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th class="font-weight-bold">
+                #
+              </th>
+              <th class="">
+                Username
+              </th>
+              <th class="text-center">
+                Points
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let user of players;">
+              <td>{{getIndexFor(user)}}</td>
+              <td class="">{{user.getName()}}</td>
+              <td class="text-center">{{user.score}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2>Match Overview</h2>
+      <div class="d-flex justify-content-center flex-column">
+        <div *ngIf="options !== undefined">
+          <div class="container">
+            <div class="row select-block">
+              <select class="form-select" [(ngModel)]="selectedOption" (ngModelChange)="updateValuesFor($event)">
+                <option *ngFor="let option of options"
+                        [ngValue]="option"
+                >{{option.getMatchName()}}</option>
+              </select>
+            </div>
+            <div class="row info-block" style="display: block">
+              <p><span style="font-weight: bold">Match: </span>{{selectedOption.getMatchName()}}</p>
+              <p><span style="font-weight: bold">Score: </span>{{selectedOption.getScore()}}</p>
+              <p><span style="font-weight: bold">Winner: </span>{{selectedOption.getWinner()}}</p>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div *ngIf="matchResults !== undefined">
+                  <table class="table table-striped">
+                    <thead>
+                    <tr>
+                      <th class="">
+                        Username
+                      </th>
+                      <th class="text-center">
+                        Team Choice
+                      </th>
+                      <th>
+                        Result
+                      </th>
+                      <th>
+                        Points
+                      </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let user of matchResults;">
+                      <td>{{user.name}}</td>
+                      <td>{{user.teamChoice}}</td>
+                      <td>{{user.result}}</td>
+                      <td>{{user.points}}</td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

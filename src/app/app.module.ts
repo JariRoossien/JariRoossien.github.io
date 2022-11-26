@@ -12,6 +12,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ParkourComponent } from './components/leaderboard/parkour/parkour.component';
 import {A11yModule} from '@angular/cdk/a11y';
 import { WCLeaderboardComponent } from './components/worldcup/wcleaderboard/wcleaderboard.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,13 +24,14 @@ import { WCLeaderboardComponent } from './components/worldcup/wcleaderboard/wcle
     ParkourComponent,
     WCLeaderboardComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        MDBBootstrapModule.forRoot(),
-        A11yModule,
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MDBBootstrapModule.forRoot(),
+    A11yModule,
+    FormsModule,
+  ],
   providers: [
   ],
   bootstrap: [AppComponent]

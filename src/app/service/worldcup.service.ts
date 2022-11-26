@@ -15,4 +15,12 @@ export class WorldcupService {
   getLeaderboardPlayers(): Observable<any> {
     return this.httpClient.get(this.API_URL + "/leaderboard");
   }
+
+  getPossibleMatches(): Observable<any> {
+    return this.httpClient.get(this.API_URL + "/finished_matches");
+  }
+
+  getResultFor(matchId: string): Observable<any> {
+    return this.httpClient.get(this.API_URL + "/specific_results/" + matchId);
+  }
 }
