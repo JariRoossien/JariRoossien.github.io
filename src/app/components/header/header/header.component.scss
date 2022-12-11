@@ -1,11 +1,24 @@
 .header-container {
-  background-image: url('/assets/images/header_background.png');
-  background-position: center;
+  background-image: url('https://cdn.discordapp.com/attachments/917850678267891712/1051614810602754069/ezgif.com-gif-maker-3.gif');
+  background-position-x: center;
+  background-position-y: 53%;
   background-size: cover;
   width: 100%;
-  height: 100%
+  min-width: 800px;
+  height: 200px;
 }
 
+@media screen and (max-width: 800px) {
+  .header-container {
+    margin-left: calc((100% - 800px) / 2);
+    height: 140px;
+  }
+}
+
+@media screen and (min-width: 8000px) {
+  .header-container {
+  }
+}
 h1 {
 
 }
