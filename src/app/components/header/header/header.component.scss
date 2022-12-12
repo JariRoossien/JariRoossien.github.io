@@ -1,24 +1,19 @@
 .header-container {
-  background-image: url('https://cdn.discordapp.com/attachments/917850678267891712/1051614810602754069/ezgif.com-gif-maker-3.gif');
-  background-position-x: center;
-  background-position-y: 53%;
+  background-image: url('https://cdn.discordapp.com/attachments/917850678267891712/1051967998061183057/TRS_GUILD.gif');
+  background-position: center;
   background-size: cover;
   width: 100%;
   min-width: 800px;
-  height: 200px;
+  height: 150px;
 }
 
 @media screen and (max-width: 800px) {
   .header-container {
     margin-left: calc((100% - 800px) / 2);
-    height: 140px;
+    height: 110px;
   }
 }
 
-@media screen and (min-width: 8000px) {
-  .header-container {
-  }
-}
 h1 {
 
 }
